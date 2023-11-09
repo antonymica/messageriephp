@@ -1,0 +1,49 @@
+Installation de Wampserver
+Si vous voulez éviter des problèmes, il faut impérativement lire la totalité de ce message.
+AVANT de procéder à l'installation de Wampserver, vous devez vous assurez que certains éléments sont installés sur votre système, sinon, Wampserver ne pourra pas fonctionner, l'installation sera défectueuse et vous devrez supprimer Wampserver AVANT d'installer les éléments qui manquaient.
+Les paquetages Microsoft Visual Studio VC9, VC10, VC11, VC15, VC17 et VS16 sont impérativement requis pour Wampserver 3 même si vous n'utilisez que des versions Apache et PHP VC11.
+À la fin de ce texte, sous la rubrique --- Paquetages VC --- vous trouverez les liens de téléchargement desdits paquetages.
+
+--- N'installez pas Wampserver PAR-DESSUS une version existante, suivez les conseils de :
+- Installer une nouvelle version de Wampserver : http://forum.wampserver.com/read.php?1,119444
+Si vous installez Wampserver par dessus une version existante, non seulement cela ne fonctionnera pas, mais en plus vous risquez de perdre vos bases de données existantes.
+--- Installez Wampserver dans un dossier à la racine d'un disque, par exemple C:\wamp ou D:\wamp. Prenez un chemin d'installation qui ne comporte  pas d'espaces ou de caractères diacritiques ; donc, pas d'installation dans c:\Program Files\ ou c:\Program Files (x86\
+Il faut, AVANT l'installation, désactiver ou fermer certaines applications :
+- Fermer Skype ou le forcer à ne pas utiliser le port 80
+Item N°04 des CONSEILS DE DÉPANNAGE de Wampserver : http://forum.wampserver.com/read.php?1,88043
+- Désactiver IIS
+Item N°08 des CONSEILS DE DÉPANNAGE de Wampserver : http://forum.wampserver.com/read.php?1,88043
+Si vous penser ne pas être en accord avec ces prèrequis, valider Annuler pour annuler l'installation, appliquer les prérequis et relancer l'installation.
+
+Ce programme nécessite des privilèges Administrateur pour fonctionner correctement. Il sera lancé avec l'option « Exécuter en tant qu'adminsitrateur ». Si vous ne voulez pas qu'un programme ait cette option, annuler l'installation.
+--- Paquetages VC ---
+Vérifiez que vous êtes « à jour » dans les packages redistribuables VC9, VC10, VC11, VC13, VC14, VC15 et VS16
+Même si vous pensez être à jour, installez en tant qu'administrateur et si message "Déjà installé", validez Réparer.
+-- VC9 Paquetages (Visual Studio 2008 SP1)
+http://www.microsoft.com/fr-fr/download/details.aspx?id=5582
+http://www.microsoft.com/fr-fr/download/details.aspx?id=2092
+-- VC10 Paquetages (Visual Studio 2010 SP1)
+http://www.microsoft.com/fr-fr/download/details.aspx?id=8328
+http://www.microsoft.com/fr-fr/download/details.aspx?id=13523
+-- VC11 Paquetages (Visual Studio 2012 Update 4)
+Les deux fichiers VSU4\vcredist_x86.exe et VSU4\vcredist_x64.exe à télécharger sont sur la même page : http://www.microsoft.com/fr-fr/download/details.aspx?id=30679
+-- VC13 Paquetages (Visual Studio 2013)
+Les deux fichiers VSU4\vcredist_x86.exe et VSU4\vcredist_x64.exe à télécharger sont sur la même page : https://www.microsoft.com/fr-fr/download/details.aspx?id=40784
+-- VC14 Paquetages (Visual Studio 2015 Update 3) Remplacé par VC15
+-- VC15 Paquetages (Visual Studio 2017) Remplacé par VS16
+-- VS16 Paquetages Visual Studio 2015-2019 x86
+https://aka.ms/vs/16/release/VC_redist.x86.exe
+-- VS16 Paquetages Visual Studio 2015-2019 x64
+https://aka.ms/vs/16/release/VC_redist.x64.exe
+VC 2015-2019 (VS16) est retrocompatible avec VC 2015 (VC14) et VC 2017 (VC15). Cela signifie qu'un module VC14 ou VC15 peut être utilisé avec les binaires VC16. De par cette compatibilité, le numéro de version de Redistributable est 14.2x.xx et après l'installation, les paquetages Redistribuable VC2015 (VC14) et VC2017 (VC15) sont éventuellement supprimés mais vous pourrez toujours utiliser VC14 et VC15.
+
+Si vous avez un Windows en 64 bit, il faut installer les deux versions 32 et 64bits de chaque paquetage VC, même si vous n'utilisez que Wampserver 32 bit
+Attention : il peut arriver que Microsoft mette à jour les paquetages VC++ en cassant les liens de téléchargement et sans rediriger sur les nouveaux. Si le cas vous arrive, sachez que l'item numéro 20 ci-dessous sera à jour ainsi que la page http:/wampserver.aviatechno.net/ section Visual C++ Redistribuable Packages
+Voir item N°20 des CONSEILS DE DÉPANNAGE de Wampserver : http://forum.wampserver.com/read.php?1,88043
+
+Un bon moyen de vérifier les paquetages VC++ :
+- Vérifier que [b]tous les paquetages VC++[/b] sont bien installés et avec les dernières versions.
+Pour ce faire, utilisez l'outil : Vérifications paquetages VC installés
+http://wampserver.aviatechno.net/files/tools/check_vcredist.exe
+N'utilisez pas une ancienne version de l'outil que vous auriez déjà téléchargé. Télécharger toujours la dernière version juste avant de l'utiliser.
+Pour télécharger les paquetages manquants, ne vous fiez pas aux liens Microsoft, ils ne sont pas toujours fiables, télécharger les paquetages sur http://wampserver.aviatechno.net/ dans la section Visual C++ Redistribuable Packages

@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' ,sans-serif;
+}
+
+/* Scrollbar CSS */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 6px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#12154d, #1877f2);
+}
+
+.form_connexion_inscription {
+    display: flex;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    width: 350px;
+    border-radius: 6px;
+    box-shadow: 0 0 10 0 rgba(0, 0, 0, 0.1);
+}
+
+.form_connexion_inscription .message_error {
+    color: red;
+    font-size: 14px;
+}
+
+.form_connexion_inscription label {
+    margin: 2px 0;
+}
+
+.form_connexion_inscription input {
+    padding: 5px;
+    outline: 0;
+    border-radius: 6px;
+    border: 1px solid #999;
+}
+
+.form_connexion_inscription input[type='submit'] {
+    margin-top: 20px;
+    background-color: #1877f2;
+    border:  1px solid #1877f2;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form_connexion_inscription .link {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.link a {
+    text-decoration: 0;
+    font-size: 14px;
+    color: #1877f2;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Home CSS */
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    background: #fff;
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+                0 32px 64px -48px rgba(0, 0, 0, 0.5a);
+}
+
+.home {
+    padding: 25px 30px;
+}
+
+.home header, .home-list a {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+:is(.home, .home-list) .content  {
+    display: flex;
+    align-items: center;
+}
+.home .content img, .home-list img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+:is(.home, .home-list) .details {
+    color: #000;
+    margin-left: 15px;
+}
+:is(.home, .home-list) .details  span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.home header .details p{
+    font-size: 15px;
+    font-weight: normal;
+    color: #67676a;
+}
+.home header .deconnexion {
+    color: #fff;
+    background: #03054d;
+    font-size: 17px;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+
+
+.home .search{
+    margin: 20px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.home .search .text {
+    font-size: 17px;
+    position: absolute;
+    color: #3a3f0b;
+}
+.home .search input {
+    position: relative;
+    height: 42px;
+    width: calc(100% - 95px);
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    font-size: 16px;
+    border-radius:5px 0 0 5px;
+    outline: none;    
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+.home .search input.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.home .search button {
+    width: 95px;
+    height: 42px;
+    border: none;
+    outline: none;
+    color: #3a1616;
+    background: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    background: #eee;
+}
+.home .search button.active{
+    color: #fff;
+    background: #533c3c;
+    border-radius: 0 5px 5px 0;
+}
+.home .search button.active i::before{
+    content: "f00d";
+}
+.home-list {
+    max-height: 350px;
+    overflow: auto;
+}
+
+:is(.chat-box, .home-list)::-webkit-scrollbar{
+    width: 0px;
+}
+
+.home-list a{
+    margin-bottom: 10px;
+    page-break-after: 10px;
+    padding-right: 10px;
+    padding: 5px;
+    color: #f1f1f1;
+}
+.home-list a:hover{
+    background-color: #e1c1f0;
+    border-radius: 10px;
+}
+.home-list a:last-child{
+    border: none;
+    margin-bottom: 0px;
+}
+.home-list a .content img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.home-list a .content span{
+    font-weight: 500;
+}
+.home-list a .content p{
+    color: #67676a;
+    font-size: 13px;
+}
+
+.home-list a .contact{
+    margin: 5px 0px 5px 10px;
+}
+
+
+.home-list a .ajouter input[type="submit"]{
+    padding: 3px 10px;
+    color: #000;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.home-list a .ajouter input[type="submit"]:hover {
+    color: #fff;
+    background: #1877f2;
+}
+
+.home-list a .effacer{
+    margin-right: 10px;
+}
+
+/* Chat CSS */
+
+.chat-area header{
+    display: flex;
+    align-items: center;
+    padding: 13px 20px;
+}
+.chat-area header .back-icon {
+    font-size: 18px;
+    color: #333;
+}
+.chat-area header img {
+    height: 45px;
+    width: 45px;
+    margin: 0 13px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.chat-area header span {
+    font-size: 17px;
+    font-weight: 500;
+}
+.chat-area header p {
+    font-size: 15px;
+}
+.chat-box{
+    height: 400px;
+    overflow-y: auto;
+    background: linear-gradient(#12154d8f, #1876f27a);
+    padding: 10px 30px 20px 38px;
+    box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
+                inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
+}
+.chat-box .chat{
+    margin: 15px 0;
+}
+.chat-box .chat p{
+    word-wrap: break-word;
+    padding: 8px 16px;
+    box-shadow: 0 0 32px rgb(0 0 0 / 8%),
+                0 16px 16px -16px rgb(0 0 0 / 10%);
+}
+
+.chat-box .outgoing {
+    display: flex;
+}
+.outgoing .details{
+    margin-left: auto;
+    max-width: calc(100% - 130px);
+}
+.outgoing .details p {
+    background: #1877f2;
+    color: #fff;
+    border-radius: 18px 18px 0 18px;
+}
+
+.outgoing .details span{
+    text-align: left;
+    color: #477abd; 
+    font-size: 11px; 
+}
+.outgoing .details p span{
+    text-align: center;
+    color: #eee; 
+    font-size: 11px; 
+}
+
+.outgoing .details a{
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #051e8d;
+    margin: 2px;
+    width: 100%;
+    height: auto;
+}
+
+.outgoing .details a img{
+    margin-top: 3px;
+    width: 100%;
+    height: auto;
+}
+
+.chat-box .incoming{
+    display: flex;
+    align-items: flex-end;
+}
+.chat-box .incoming .img1{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.incoming .details{
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: calc(100% - 130px);
+    overflow: hidden;
+}
+.incoming .details p{
+    background: #fff;
+    color: #333;
+    border-radius: 18px 18px 18px 0;
+}
+.incoming .details span{
+    text-align: right;
+    color: #477abd; 
+    font-size: 11px; 
+}
+.incoming .details p span{
+    text-align: center;
+    color: #333; 
+    font-size: 11px; 
+}
+
+.incoming .details a{
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #051e8d;
+    margin: 2px;
+    width: 100%;
+    height: auto;
+}
+
+.incoming .details a img{
+    margin-top: 3px;
+    width: 100%;
+    height: auto;
+}
+
+.chat-area .typing-area {
+    padding: 13px 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.typing-area input[type="text"]{
+    height: 45px;
+    width: calc(100% - 75px);
+    font-size: 17px;
+    border: 1px solid #ccc;
+    padding: 0 13px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+.typing-area button{
+    height: 45px;
+    width: 75px;
+    border: none;
+    outline: none;
+    background: #12154d;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.typing-area #file{
+    display: none;
+}
+
+.typing-area .uploadBtn{
+    height: 45px;
+    width: 50px;
+    background: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #020314;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.typing-area .uploadBtn img{
+    position: static;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    color: #ccc;
+}
